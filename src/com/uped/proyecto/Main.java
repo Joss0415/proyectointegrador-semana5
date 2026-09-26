@@ -1,15 +1,45 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+package com.uped.proyecto;
+
+import com.uped.proyecto.modelo.*;
+
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Cliente cliente = new Cliente("Ana López", "04512378-9", "7777-1234");
+        System.out.println(cliente.presentarse());
+
+        new Cliente("Ana López", "04512378-9", "7777-1234");
+
+        Visitante v = new Visitante("Kevin");
+        System.out.println(v);
+
+        Empleado empleado = new Empleado("Luis Pérez", "06223456-1", 850.0);
+        System.out.println(empleado.presentarse());
+        empleado.actualizarNombre("Luis Pérez Martínez");
+        System.out.println(empleado.presentarse());
+
+        Persona[] personas = {
+                new Cliente("Ana López", "04512378-9", "7777-1234"),
+                new Empleado("Luis Pérez", "06223456-1", 850.0),
+                new Visitante("Kevin")
+        };
+
+        // Recorremos el arreglo llamando al metodo heredado
+        for (Persona p : personas) {
+            System.out.println(p.presentarse());
+
+            Estudiante e = new Estudiante(
+                    "Carlos Ramírez", "06123456-7",
+                    "UPED-2026-045", "Ing. en Sistemas"
+            );
+            System.out.println(e);
+            e.matricular("Programación III");
+
+            Docente docente = new Docente("María Hernández", "05987654-3", "Ingeniería de Software", 8);
+            System.out.println(docente);
+            docente.impartirClase("Programación III");
         }
     }
 }
+

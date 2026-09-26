@@ -1,4 +1,12 @@
 package com.uped.proyecto.modelo;
 
-public class Visitante {
+public class Visitante extends Persona {
+    public Visitante(String nombre) {
+        super(nombre); // invoca Persona(String)
+    }
+
+    @Override
+    public String toString() {
+        return "Visitante {" + presentarse() + "}";
+    }
 }
