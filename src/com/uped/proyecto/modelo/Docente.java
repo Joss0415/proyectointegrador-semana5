@@ -11,7 +11,7 @@ public class Docente extends Persona {
         this.anosExperiencia = anosExperiencia;
     }
 
-    // Método propio del docente
+    // Metodo propio del docente
     public void impartirClase(String materia) {
         System.out.println(nombre + " imparte: " + materia);
     }

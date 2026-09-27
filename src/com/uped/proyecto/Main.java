@@ -9,8 +9,6 @@ public class Main {
         Cliente cliente = new Cliente("Ana López", "04512378-9", "7777-1234");
         System.out.println(cliente.presentarse());
 
-        new Cliente("Ana López", "04512378-9", "7777-1234");
-
         Visitante v = new Visitante("Kevin");
         System.out.println(v);
 
@@ -25,21 +23,17 @@ public class Main {
                 new Visitante("Kevin")
         };
 
-        // Recorremos el arreglo llamando al metodo heredado
         for (Persona p : personas) {
             System.out.println(p.presentarse());
-
-            Estudiante e = new Estudiante(
-                    "Carlos Ramírez", "06123456-7",
-                    "UPED-2026-045", "Ing. en Sistemas"
-            );
-            System.out.println(e);
-            e.matricular("Programación III");
-
-            Docente docente = new Docente("María Hernández", "05987654-3", "Ingeniería de Software", 8);
-            System.out.println(docente);
-            docente.impartirClase("Programación III");
         }
+
+        Estudiante e = new Estudiante("Carlos Ramírez", "06123456-7",
+                "UPED-2026-045", "Ing. en Sistemas");
+        System.out.println(e);
+        e.matricular("Programación III");
+
+        Docente docente = new Docente("María Hernández", "05987654-3", "Ingeniería de Software", 8);
+        System.out.println(docente);
+        docente.impartirClase("Programación III");
     }
 }
-
